@@ -53,3 +53,7 @@ See `docs/DEPLOYMENT.md`, `web/README.md`, and `backend/README.md`. Production r
 
 ## Tests
 The repository contains basic Android phone-format unit tests. This environment did not execute an Android/Gradle build; GitHub Actions is configured to perform it. Review CI results before installation.
+
+
+## Build fix note
+The Android build log showed `Unresolved reference setContent` in `MainActivity.kt`. The missing `androidx.activity.compose.setContent` import has been added in this archive. Re-run GitHub Actions to verify compilation; further compiler errors, if any, must be resolved from the new log.
